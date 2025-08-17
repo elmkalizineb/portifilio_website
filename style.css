@@ -56,21 +56,114 @@ section {
 .logo:hover {
   transform: scale(1.05);
 }
-.navbar a{
-    font-size: 1.5rem;
-    text-decoration: none ;
-    color: var(--bg-color);
-    margin-left: 4rem;
-    font-weight: 700;
-    transition: 0.3 ease ;
+.navbar a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--bg-color);
+  margin-left: 4rem;
+  font-weight: 700;
+  transition: 0.3 ease;
 }
-.navbar a:hover{
-    color: var(--text-color);
+.navbar a:hover {
+  color: var(--text-color);
 }
 
-#menu-icon{
-    font-size: 3.6rem;
-    color: var(--bg-color);
-    cursor: pointer;
-    opacity: 0; /* display : none */
+#menu-icon {
+  font-size: 3.6rem;
+  color: var(--bg-color);
+  cursor: pointer;
+  opacity: 0; /* display : none */
+}
+
+/* Home section  */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.home-img img {
+  width: 25vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  cursor: pointer;
+  animation: float 4s ease-in-out infinite;
+  transition: 0.4s ease;
+}
+.home-img img:hover {
+  box-shadow: 0 0 25px var(--main-color), 0 0 35px var(--main-color),
+    0 0 45px var(--main-color);
+}
+.home-content {
+  margin-left: 5rem;
+}
+.home-content h3 {
+  font-size: 3.07rem;
+  font-weight: 700;
+}
+.home-content h3:nth-of-type(2) {
+  /* selects the second  h3  in home-content */
+  margin-bottom: 2rem;
+}
+span {
+  color: var(--main-color);
+}
+.home-content h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.home-content p {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+.social a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 10px ;  */
+  width: 42px;
+  height: 42px;
+  margin-right: 10px;
+  background: transparent;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--main-color);
+  transition: 0.3s ease;
+}
+.social a:hover {
+  transform: scale(1) translate(-10px);
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  box-shadow: 0 0 25px var(--main-color);
+}
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: none;
+  font-size: 1.6rem;
+  color: var(--bg-color);
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+.btn:hover {
+   box-shadow: 0 0 1.6rem var(--main-color);
+   
+}
+
+
+/*Animation Keyframes */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  } /* moveup */
+  0% {
+    transform: translateY(0);
+  } /* back down */
 }
